@@ -1,3 +1,6 @@
+import { fetchPhotos } from "./api";
+
+
 export const App = () => {
   return (
     <div
