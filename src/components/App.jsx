@@ -48,14 +48,14 @@ export class App extends Component {
   }
 
   onFormSubmit = (query) => {
-    this.setState({ query, images: [], page: 1, onLoadMore: false });
+    this.setState({ query, images: [], page: 1, onLoadMore: false, });
   };
 
   openModal = (largeImageURL) => {
     this.setState({ showModal: true, largeImageURL: largeImageURL });
   };
 
-  onloadMore = () => {
+  onLoadMore = () => {
     this.setState(prevState => ({ page: prevState.page + 1 }));
   };
 
