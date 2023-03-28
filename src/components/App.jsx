@@ -6,6 +6,7 @@ import { ImageGallery } from './ImageGallery/ImageGallery';
 import { Loader } from './Loader/Loader';
 import { Searchbar } from './Searchbar/Searchbar';
 import css from "./App.module.css";
+import { animateScroll } from 'react-scroll';
 
 export class App extends Component {
   state = {
@@ -56,7 +57,11 @@ export class App extends Component {
   };
 
   onLoadMore = () => {
-    this.setState(prevState => ({ page: prevState.page + 1 }));
+    this.setState(prevState => ({ page: prevState.page + 1 }))
+      animateScroll.scrollToBottom({
+    duration: 500,
+    delay: 14,
+  });;
   };
 
   closeModal = () => {

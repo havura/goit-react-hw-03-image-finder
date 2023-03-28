@@ -5,7 +5,6 @@ axios.defaults.params = {
   key: '34020609-8fd5e6226221618c5d9372e77',
   image_type: 'photo',
   orientation: 'horizontal',
-  safesearch: true,
   per_page: 12,
 };
 
