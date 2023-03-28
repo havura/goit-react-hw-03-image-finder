@@ -11,7 +11,7 @@ export class Modal extends Component {
     window.removeEventListener('keydown', this.handleKeyDown);
   }
 
-  handleKeyDown = event => {
+  handleKeyDown = (event) => {
     if (event.code === 'Escape') {
       this.props.closeModal();
     }
@@ -36,5 +36,5 @@ export class Modal extends Component {
 
 Modal.propTypes = {
   onModalClose: PropTypes.func,
-  largeImageUrl: PropTypes.string.isRequired,
+  largeImageUrl: PropTypes.string,
 };
